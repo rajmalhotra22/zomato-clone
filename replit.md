@@ -2,7 +2,7 @@
 
 ## Overview
 
-pnpm workspace monorepo using TypeScript. Each package manages its own dependencies.
+pnpm workspace monorepo using TypeScript. Contains a Zomato-style food delivery web app called "Foodie".
 
 ## Stack
 
@@ -15,6 +15,28 @@ pnpm workspace monorepo using TypeScript. Each package manages its own dependenc
 - **Validation**: Zod (`zod/v4`), `drizzle-zod`
 - **API codegen**: Orval (from OpenAPI spec)
 - **Build**: esbuild (CJS bundle)
+- **Frontend**: React + Vite + Tailwind CSS + Wouter routing
+- **State**: React Query (server state) + React Context (cart state)
+
+## Artifacts
+
+- **`artifacts/zomato-clone`** — Main food delivery web app (previewPath: `/`)
+- **`artifacts/api-server`** — Express API server (previewPath: `/api`)
+
+## App Features
+
+- Homepage with hero, cuisine categories, featured restaurants
+- Restaurant listing with cuisine filters and sort options
+- Restaurant detail page with menu grouped by category, add-to-cart
+- Cart with item management, bill breakdown, and order placement
+- Order history and order detail with delivery tracking
+
+## DB Schema
+
+- `restaurants` — Restaurant listings with cuisine, rating, delivery info
+- `menu_items` — Menu items per restaurant grouped by category
+- `categories` — Cuisine categories with image URLs
+- `orders` — Customer orders with items (JSON), status tracking
 
 ## Key Commands
 
