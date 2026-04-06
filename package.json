@@ -4,15 +4,14 @@
   "license": "MIT",
   "scripts": {
     "preinstall": "sh -c 'rm -f package-lock.json yarn.lock; case \"$npm_config_user_agent\" in pnpm/*) ;; *) echo \"Use pnpm instead\" >&2; exit 1 ;; esac'",
-    "build": "echo 'skip root build",
+    "build": "echo \"skip root build\"",
     "typecheck:libs": "tsc --build",
     "typecheck": "pnpm run typecheck:libs && pnpm -r --filter \"./artifacts/**\" --filter \"./scripts\" --if-present run typecheck"
   },
   "engines": {
     "node": ">=18"
-  }
-  "packageManager": "pnpm@8.15.0"
-
+  },
+  "packageManager": "pnpm@8.15.0",
   "private": true,
   "devDependencies": {
     "typescript": "~5.9.2",
